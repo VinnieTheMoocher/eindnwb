@@ -56,8 +56,7 @@ ip route 0.0.0.0 0.0.0.0 192.168.100.1
 !dhcp snooping
 ip dhcp snooping
 ip dhcp snooping vlan 10,20,30
-interface range g0/1-2
-ip dhcp snooping trust
+
 
 ! trunk ports to core switches
 
@@ -67,20 +66,24 @@ switchport mode trunk
 switchport nonegotiate
 switchport trunk allowed vlan 10,20,30,100
 switchport trunk native vlan 99
+ip dhcp snooping trust
 
 ! access ports 
 
 interface g1/0
 switchport mode access
 switchport access vlan 10
+ip dhcp snooping trust
 
 interface g2/0
 switchport mode access
 switchport access vlan 20
+ip dhcp snooping trust
 
 interface g03/0
 switchport mode access
 switchport access vlan 30
+ip dhcp snooping trust
 
 end
 write memory
