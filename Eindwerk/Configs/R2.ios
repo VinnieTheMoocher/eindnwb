@@ -36,7 +36,7 @@ ip route 0.0.0.0 0.0.0.0 gigabitEthernet 0/0 192.168.122.1
 ! NAT
 
 interface g0/0
-ip address 192.168.122.2 255.255.255.252
+ip address 192.168.122.2 255.255.255.0
 ip nat outside
 no shutdown
 
