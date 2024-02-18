@@ -53,6 +53,12 @@ no shut
 
 ip route 0.0.0.0 0.0.0.0 192.168.100.1
 
+!dhcp snooping
+ip dhcp snooping
+ip dhcp snooping vlan 10,20,30
+interface range g0/1-2
+ip dhcp snooping trust
+
 ! trunk ports to core switches
 
 interface range g0/1-2
