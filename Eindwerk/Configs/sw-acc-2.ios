@@ -58,6 +58,10 @@ ip dhcp snooping
 ip dhcp snooping vlan 10,20,30
 ip arp inspection vlan 10,20,30
 
+!shutting down all ports for security
+interface range g0/0-3,g1/0-3,g2/0-3,g3/0-3
+shut
+
 ! trunk ports to core switches
 
 interface range g0/1-2
@@ -68,6 +72,7 @@ switchport trunk allowed vlan 10,20,30,100
 switchport trunk native vlan 99
 ip dhcp snooping trust
 ip arp inspection trust
+no shut
 
 ! access ports
 
@@ -75,16 +80,19 @@ interface g1/0
 switchport mode access
 switchport access vlan 10
 ip dhcp snooping trust
+no shut
 
 interface g2/0
 switchport mode access
 switchport access vlan 20
 ip dhcp snooping trust
+no shut
 
 interface g03/0
 switchport mode access
 switchport access vlan 30
 ip dhcp snooping trust
+no shut
 
 end
 write memory
