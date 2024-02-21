@@ -56,7 +56,7 @@ ip route 0.0.0.0 0.0.0.0 192.168.100.1
 !dhcp snooping
 ip dhcp snooping
 ip dhcp snooping vlan 10,20,30
-ip arp inspection vlan 10,20,30
+
 
 !shutting down all ports for security
 interface range g0/0-3,g1/0-3,g2/0-3,g3/0-3
