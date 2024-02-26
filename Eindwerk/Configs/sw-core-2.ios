@@ -78,7 +78,7 @@ standby 100 ip 10.0.100.1
 no shut
 
 !dhcp
-ip dhcp excluded-address 10.0.10.1 192.168.10.10
+ip dhcp excluded-address 10.0.10.1 10.0.10.10
 ip dhcp pool vlan10
 default-router 10.0.10.1
 dns-server 9.9.9.9
