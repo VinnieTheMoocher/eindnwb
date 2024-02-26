@@ -46,12 +46,12 @@ exit
 ! IP for MGMT vlan
 
 interface vlan 100
-ip address 192.168.100.61 255.255.255.0
+ip address 10.0.100.61 255.255.255.0
 no shut
 
 ! static route gw
 
-ip route 0.0.0.0 0.0.0.0 192.168.100.1
+ip route 0.0.0.0 0.0.0.0 10.0.100.1
 
 !dhcp snooping
 ip dhcp snooping
@@ -71,7 +71,6 @@ switchport nonegotiate
 switchport trunk allowed vlan 10,20,30,100
 switchport trunk native vlan 99
 ip dhcp snooping trust
-ip arp inspection trust
 no shut
 
 ! access ports 
