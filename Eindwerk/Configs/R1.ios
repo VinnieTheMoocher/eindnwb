@@ -82,4 +82,4 @@ ip nat inside
 ip nat inside source list LAN_ALLOW_PAT interface g0/0 overload
 exit
 !
-do write memory
+write memory
